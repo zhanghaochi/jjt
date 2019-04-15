@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="headbar-container">
     <el-switch
       @change="togglesidebar"
       active-color="#13ce66"

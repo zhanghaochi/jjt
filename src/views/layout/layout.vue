@@ -1,8 +1,8 @@
 <template>
-  <el-container class="app-container">
-    <el-aside width="200px">
+  <el-container class="app-wrapper">
+    <div class="side-container">
       <sidebar/>
-    </el-aside>
+    </div>
     <el-container class="main-container">
       <el-header style="height: 40px">
         <headbar/>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { getscreenheight } from "@/utils";
 import { sidebar, headbar, tagbar, appmain } from "./components";
 export default {
   components: {
@@ -23,9 +24,12 @@ export default {
     headbar,
     tagbar,
     appmain
-  }
+  },
+  data() {
+    return {
+      sideheight: getscreenheight()
+    };
+  },
 };
 </script>
 
-<style scoped>
-</style>
