@@ -1,32 +1,32 @@
 #app {
-  .app-wrapper{
+  .app-wrapper {
     height: 100%;
-    .side-container{
+    .side-container {
       height: 100%;
       overflow: hidden;
-      background-color:$menuBg;
-      .el-scrollbar{
+      background-color: $menuBg;
+      .el-scrollbar {
         height: 100%;
         .el-scrollbar__wrap {
           height: 100%;
           overflow-x: hidden;
         }
       }
-      .el-menu{
+      .el-menu {
         height: 100%;
         border: none;
-        background-color:$menuBg;
-        &:not(.el-menu--collapse){
+        background-color: $menuBg;
+        &:not(.el-menu--collapse) {
           width: $sideBarWidth;
         }
-
       }
-      .el-menu-item,.el-submenu__title {
+      .el-menu-item,
+      .el-submenu__title {
         color: #fff;
-          &:hover {
-            background-color: $menuHover !important;
-          }
+        &:hover {
+          background-color: $menuHover !important;
         }
+      }
     }
   }
 }
