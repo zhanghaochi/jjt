@@ -15,16 +15,8 @@
       .el-menu {
         height: 100%;
         border: none;
-        background-color: $menuBg;
         &:not(.el-menu--collapse) {
           width: $sideBarWidth;
-        }
-      }
-      .el-menu-item,
-      .el-submenu__title {
-        color: #fff;
-        &:hover {
-          background-color: $menuHover !important;
         }
       }
     }

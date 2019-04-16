@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import { getscreenheight } from "@/utils";
 import { sidebar, headbar, tagbar, appmain } from "./components";
 export default {
   components: {
@@ -24,12 +23,7 @@ export default {
     headbar,
     tagbar,
     appmain
-  },
-  data() {
-    return {
-      sideheight: getscreenheight()
-    };
-  },
+  }
 };
 </script>
 
