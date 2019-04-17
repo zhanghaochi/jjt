@@ -4,7 +4,10 @@ import store from './store'
 import router from './router'
 import './plugins/element.js'
 import '@/styles/index.scss'
+import './icons'
+import './permission.js'
 
+import './mock'
 
 Vue.config.productionTip = false
 

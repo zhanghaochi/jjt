@@ -2,13 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import layout from '@/views/layout/layout'
 
-import {bonus} from './modules'
-
 Vue.use(Router)
 
 export const constantRouterMap = [
   {
-    path: '',
+    path: '/',
     component: layout,
     redirect: 'homepage',
     children: [
@@ -23,7 +21,7 @@ export const constantRouterMap = [
   {
     path: '/ceshi',
     component: layout,
-    redirect: '/ceshi',
+    redirect: '/ceshi/index',
     children: [
       {
         path: 'index',
@@ -53,7 +51,46 @@ export const constantRouterMap = [
 
 export const asyncRouterMap = [
   {
-    bonus
+    path: '/bonus',
+    component: layout,
+    redirect: '/bonus/index',
+    meta: { title: '奖金条上传', icon: 'bonus',roles: ['jingjike']},
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/bonus/index'),
+        name: 'bonus',
+        meta: { title: '奖金条上传', icon: 'bonus',roles: ['jingjike']}
+      }
+    ]
+  },
+  {
+    path: '/salary',
+    component: layout,
+    redirect: '/salary/index',
+    meta: { title: '工资条上传', icon: 'salary',roles: ['caiwuke']},
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/salary/index'),
+        name: 'salary',
+        meta: { title: '工资条上传', icon: 'salary',roles: ['caiwuke']}
+      }
+    ]
+  },
+  {
+    path: '/tel',
+    component: layout,
+    redirect: '/tel/index',
+    meta: { title: '座机固话', icon: 'tel',roles: ['yuanban']},
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/tel/index'),
+        name: 'tel',
+        meta: { title: '座机固话', icon: 'tel',roles: ['yuanban']}
+      }
+    ]
   }
 ]
 

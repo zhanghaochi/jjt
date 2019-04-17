@@ -1,5 +1,7 @@
 <template>
-    <div><h1>测试页</h1></div>
+    <div>
+        <h1>salary</h1>
+    </div>
 </template>
 
 <script>

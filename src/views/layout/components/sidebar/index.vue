@@ -1,13 +1,8 @@
 <template>
   <el-scrollbar>
-    <el-menu
-      :collapse="sidebar"
-      unique-opened
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#434a50"
-    >
-      <el-submenu index="1">
+    <el-menu :collapse="sidebar" unique-opened background-color="#677f7f" text-color="#fff" router>
+    <sideitem v-for="(router,k) in permission_routers" :key="k" :item="router"/>
+      <!-- <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
           <span slot="title">导航一</span>
@@ -44,28 +39,27 @@
         <el-menu-item index="5-2">选项2</el-menu-item>
         <el-menu-item index="5-3">选项1</el-menu-item>
         <el-menu-item index="5-4">选项2</el-menu-item>
-      </el-submenu>
+      </el-submenu>-->
     </el-menu>
   </el-scrollbar>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
+import sideitem from "./sideitem";
 
 export default {
   data() {
     return {};
   },
-  computed: {
-    ...mapGetters(["sidebar"])
+  components: {
+    sideitem
   },
-  methods: {}
+  computed: {
+    ...mapGetters(["permission_routers", "sidebar"])
+  }
 };
 </script>
 
 <style scoped>
-/* .el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
-  min-height: 400px;
-} */
 </style>

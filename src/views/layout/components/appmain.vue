@@ -1,15 +1,16 @@
 <template>
-    <div>
-        <h1>appmain</h1>
-    </div>
+    <transition mode="out-in">
+        <router-view/>
+    </transition>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
+<style scoped>
+.box2{
+    color: #000;
+    background-color: #999
+}
 </style>
