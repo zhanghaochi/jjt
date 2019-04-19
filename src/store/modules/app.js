@@ -2,7 +2,7 @@ import cookies from 'js-cookie'
 
 const app = {
   state: {
-    sidebar: cookies.get('sidebarStatus') ? !!+cookies.get('sidebarStatus') : true,
+    sidebar: cookies.get('sidebarStatus') ? !!+cookies.get('sidebarStatus') : false,
   },
   mutations: {
     TOGGLE_SIDEBAR: state => {

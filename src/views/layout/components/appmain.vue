@@ -9,8 +9,4 @@ export default {};
 </script>
 
 <style scoped>
-.box2{
-    color: #000;
-    background-color: #999
-}
 </style>
